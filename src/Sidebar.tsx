@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Sidebar.css'; // Certifique-se de que o caminho para o CSS esteja correto
-import logoCollapsed from './Content/logo.png'; // Importa a imagem
-import logoExpanded from './Content/logo_header.png'; // Importa a imagem
+import logoCollapsed from './Assets/logo.png'; // Importa a imagem
+import logoExpanded from './Assets/logo_header.png'; // Importa a imagem
 
 const Sidebar: React.FC = () => {
     const [isFixed, setIsFixed] = useState(false);

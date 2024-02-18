@@ -1,0 +1,72 @@
+/* Sidebar.css */
+.sidebar {
+    height: 100%;
+    width: 80px; /* Largura inicial da sidebar recolhida */
+    position: fixed;
+    z-index: 2; /* Certifique-se de que a sidebar tem um z-index maior que o conteúdo principal */
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    padding-top: 20px;
+}
+
+.sidebar.expanded {
+    width: 250px; /* Largura da sidebar quando expandida */
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.5s;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.sidebar a span, .sidebar button span {
+    display: none; /* Esconde os textos quando a sidebar está recolhida */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.sidebar.expanded a span {
+    display: block; /* Mostra os textos quando a sidebar está expandida */
+    opacity: 1;
+}
+
+.toggle-btn {
+    display: none; /* O botão é escondido por padrão */
+    cursor: pointer;
+    position: absolute;
+    right: 10px; /* Alinha ao lado direito */
+    top: 10px;
+    background: none; /* Remove qualquer fundo para o botão */
+    border: none; /* Remove a borda do botão */
+    color: white; /* Define a cor do ícone do botão */
+    font-size: 16px; /* Ajusta o tamanho do ícone para ser menor */
+    padding: 0;
+}
+
+.sidebar.expanded .toggle-btn {
+    display: block; /* Mostra o botão apenas quando a sidebar está expandida */
+}
+
+.sidebar-logo {
+    display: block;
+    height: 50px; /* Altura fixa para o logo */
+    width: 50px; /* Largura inicial para o logo na sidebar colapsada */
+    margin: 20px auto; /* Centraliza o logo horizontalmente e adiciona margem superior */
+    transition: width 0.5s; /* Suaviza a transição da largura */
+}
+
+.sidebar.expanded .sidebar-logo {
+    width: 80%; /* Aumenta a largura do logo na sidebar expandida */
+    /* Adapte a % de acordo com o desejado ou especifique um valor fixo em px */
+}

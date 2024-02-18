@@ -1,0 +1,16 @@
+/* App.css */
+.app {
+  display: flex;
+}
+
+.main {
+  transition: margin-left 0.5s;
+  margin-left: 250px; /* Ajusta conforme a largura da sidebar expandida */
+  flex-grow: 1;
+  padding: 16px;
+}
+
+/* Quando a sidebar não está expandida */
+.sidebar:not(.expanded) + .main {
+  margin-left: 80px; /* Ajusta conforme a largura da sidebar colapsada */
+}
